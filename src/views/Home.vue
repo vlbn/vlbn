@@ -1,6 +1,6 @@
 <template>
 
-  <HelloWorld msg="help me world 🤷" />
+  <HelloWorld msg="hell world 👽" />
 
   <button class="my-4 button is-link" @click="revelarOcultar">{{ buttonText }}</button>
 
