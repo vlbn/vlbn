@@ -1,42 +1,14 @@
 <template>
-
-  <HelloWorld msg="hell world 👽" />
-
-  <button class="my-4 button is-link" @click="revelarOcultar">{{ buttonText }}</button>
-
-  <transition name="fade"
-    ><p v-if="!lorem">
-      Lorem ipsum dolor sit amet
-      <strong>consectetur adipisicing elit.</strong> Qui nam accusamus vero odio
-      quibusdam libero ex facilis molestias nulla doloribus iste, impedit sunt
-      placeat eos assumenda? Laboriosam adipisci dolore maiores?
-    </p></transition
-  >
-  
+  <Logo />
 </template>
 
 <script>
-import HelloWorld from "@/components/HelloWorld.vue";
+import Logo from "@/components/Logo.vue";
 
 export default {
   name: "Home",
   components: {
-    HelloWorld,
-  },
-  data() {
-    return {
-      lorem: true,
-    };
-  },
-  computed: {
-    buttonText() {
-      return this.lorem ? "Lorem" : "Ipsum";
-    },
-  },
-  methods: {
-    revelarOcultar() {
-      this.lorem = !this.lorem;
-    },
+    Logo,
   },
 };
 </script>

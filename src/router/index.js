@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home.vue";
+import NotFound from "../views/NotFound.vue";
 
 const routes = [
   {
@@ -8,11 +9,13 @@ const routes = [
     component: Home,
   },
   {
-    path: "/about",
-    name: "About",
-    component: () => import("../views/About.vue"),
+    path: "/:notFound(.*)",
+    name: "NotFound",
+    component: NotFound,
   },
 ];
+
+linkActiveClass: "underline";
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
