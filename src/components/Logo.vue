@@ -1,9 +1,8 @@
 <template>
   <svg
-    class="p-5"
     xmlns="http://www.w3.org/2000/svg"
-    width="340"
-    height="200"
+    width="220"
+    height="120"
     viewBox="0 0 90 52.916668"
     version="1.1"
     id="svg1501"

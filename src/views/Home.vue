@@ -1,20 +1,12 @@
 <template>
-  <div class="centerXY fill-viewport-100 pointer" @click="showHide">
+  <div class="centerXY fill-viewport-100 pointer" @click="flipCard">
     <transition name="fade" mode="out-in">
-      <figure v-if="logo">
+      <div v-if="!flip">
         <Logo />
-      </figure>
-      <div v-else class="columns is-mobile is-centered">
-        <div
-          class="column is-three-quarters-mobile is-two-thirds-tablet is-half-desktop is-one-third-widescreen is-one-quarter-fullhd"
-        >
-          <p class="has-text-justified">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
-            deleniti esse officiis asperiores, architecto eaque at accusamus.
-            <strong>Quia aliquam possimus</strong>, quaerat odit minus eligendi
-            enim minima. Amet consequatur perferendis aspernatur.
-          </p>
-        </div>
+      </div>
+      <div v-else class="centerXY">
+        <Name class="mb-6" />
+        <ContactData class="mt-6" />
       </div>
     </transition>
   </div>
@@ -22,20 +14,24 @@
 
 <script>
 import Logo from "@/components/Logo.vue";
+import Name from "@/components/Name.vue";
+import ContactData from "@/components/ContactData.vue";
 
 export default {
   name: "Home",
   components: {
     Logo,
+    Name,
+    ContactData,
   },
   data() {
     return {
-      logo: true,
+      flip: false,
     };
   },
   methods: {
-    showHide() {
-      this.logo = !this.logo;
+    flipCard() {
+      this.flip = !this.flip;
     },
   },
 };
