@@ -1,35 +1,203 @@
 <template>
-  <div class="centerXY fill-viewport-100 pointer" @click="showHide">
-    <transition name="fade"
-      ><figure v-if="logo">
-        <img class="p-6" src="../assets/img/logo.svg" alt="valbuena" />
-      </figure>
-      <div v-else class="columns is-mobile is-centered">
-        <div class="column is-half">
-          <p class="has-text-left">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
-            deleniti esse officiis asperiores, architecto eaque at accusamus.
-            <strong>Quia aliquam possimus</strong>, quaerat odit minus eligendi enim minima. Amet
-            consequatur perferendis aspernatur.
-          </p>
-        </div>
-      </div>
-    </transition>
-  </div>
+  <svg
+    class="p-5"
+    xmlns="http://www.w3.org/2000/svg"
+    width="340"
+    height="200"
+    viewBox="0 0 90 52.916668"
+    version="1.1"
+    id="svg1501"
+  >
+    <g
+      transform="matrix(.01965 0 0 .01965 -130.93162 112.402)"
+      id="izquierdo"
+      fill="#273849"
+      fill-opacity="1"
+      color="#000"
+      font-style="normal"
+      font-variant="normal"
+      font-weight="400"
+      font-stretch="normal"
+      font-size="medium"
+      font-family="sans-serif"
+      letter-spacing="normal"
+      word-spacing="normal"
+      writing-mode="lr-tb"
+      direction="ltr"
+      dominant-baseline="auto"
+      text-anchor="start"
+      clip-rule="nonzero"
+      visibility="visible"
+      color-interpolation="sRGB"
+      color-interpolation-filters="linearRGB"
+      fill-rule="nonzero"
+      stroke="none"
+      stroke-width="5.27852"
+      stroke-linecap="butt"
+      stroke-linejoin="miter"
+      stroke-miterlimit="4"
+      stroke-dasharray="none"
+      stroke-dashoffset="0"
+      stroke-opacity="1"
+      paint-order="fill markers stroke"
+      color-rendering="auto"
+      image-rendering="auto"
+      shape-rendering="auto"
+      text-rendering="auto"
+    >
+      <path
+        id="path1976-4"
+        style="line-height:normal;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000;text-transform:none;text-orientation:mixed;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;isolation:auto;mix-blend-mode:normal;solid-color:#000;solid-opacity:1"
+        d="M7267.8917-4256.0127c28.598-15.5564 57.1565-31.1891 85.6984-46.8515 28.6187-15.7043 57.222-31.4377 85.8347-47.1531l778.8268 427.579c40.0529 21.9889 54.5956 71.9364 32.6067 111.9892-21.9898 40.0528-71.9366 54.594-111.9893 32.6051z"
+        text-decoration="none"
+        baseline-shift="baseline"
+        display="inline"
+        overflow="visible"
+        vector-effect="none"
+        stop-color="#000"
+      />
+      <path
+        id="path1978-8"
+        d="M7154.4311-4333.373c21.9898 40.0528 71.9365 54.5952 111.9893 32.6063l952.4066-522.8738c40.0527-21.9889 54.5952-71.9366 32.6063-111.9893-21.9899-40.0528-71.9366-54.5943-111.9894-32.6054l-952.4065 522.8738c-40.0528 21.9889-54.5952 71.9357-32.6063 111.9884z"
+        style="line-height:normal;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000;text-transform:none;text-orientation:mixed;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;isolation:auto;mix-blend-mode:normal;solid-color:#000;solid-opacity:1"
+        text-decoration="none"
+        baseline-shift="baseline"
+        display="inline"
+        overflow="visible"
+        vector-effect="none"
+        stop-color="#000"
+      />
+    </g>
+    <g
+      id="lapizPluma"
+      transform="matrix(2.27321 0 0 2.27321 -56.889067 -75.836335)"
+      fill="#273849"
+      fill-opacity="1"
+      paint-order="fill markers stroke"
+    >
+      <path
+        d="M42.179438 50.922375c-.01021-.329641-.01632-.604716-.01366-.61127.269455.300523.551846.582813 1.328465.517544-.000999.0024-.192997.196737-.426729.431729l-.424983.427261-.222306-.08296-.222302-.08295z"
+        id="path1982-1"
+        stroke-width=".0300726"
+      />
+      <path
+        d="M42.203504 51.880688c-.0044-.131842-.006-.244458-.0038-.250256.0023-.0058.08821.02247.190942.06283.143245.05627.16404.06757.152347.08005-.06902.07364-.229892.219179-.241458.224754-.008.0039-.09373.01446-.09807-.117376z"
+        id="path1984-4"
+        stroke-width=".0300726"
+      />
+      <path
+        d="M46.709583 38.567875l.227238-.09938c.242843-.106198.387698-.195592.580666-.358338l.120665-.101782-.150639.38477c-.148495.379306-.151703.385391-.229573.427616-.09612.05214-.116169.09692-.0869.194175.01599.05322.04234.08214.09283.101981.144405.05672.272342-.09539.198224-.235662l-.03803-.07197.159674-.404646.159673-.404638.02311.208306c.02846.256585.09604.494769.203697.717855.06009.124532.07367.175974.05081.192426-.32597.303396-.583441.716331-.726143 1.079601-.234942-.202687-.501397-.321374-.813092-.319406.144621-.468301.231345-.858678.227757-1.31094z"
+        id="path1986-5"
+        stroke-width=".0419824"
+      />
+      <path
+        style="line-height:normal;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000;text-transform:none;text-orientation:mixed;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;isolation:auto;mix-blend-mode:normal;solid-color:#000;solid-opacity:1"
+        d="M46.799003 40.366599c.367572.144397.547251.556561.402854.924142l-3.433571 8.740506c-.144395.367572-.556561.547244-.924133.402849-.367581-.144396-.54725-.556564-.402858-.924137l3.433564-8.74051c.144398-.367575.556564-.547248.924144-.40285z"
+        id="path1988-3"
+        color="#000"
+        font-style="normal"
+        font-variant="normal"
+        font-weight="400"
+        font-stretch="normal"
+        font-size="medium"
+        font-family="sans-serif"
+        text-decoration="none"
+        letter-spacing="normal"
+        word-spacing="normal"
+        writing-mode="lr-tb"
+        direction="ltr"
+        dominant-baseline="auto"
+        baseline-shift="baseline"
+        text-anchor="start"
+        clip-rule="nonzero"
+        display="inline"
+        overflow="visible"
+        visibility="visible"
+        color-interpolation="sRGB"
+        color-interpolation-filters="linearRGB"
+        vector-effect="none"
+        fill-rule="nonzero"
+        stroke="none"
+        stroke-width=".0456262"
+        stroke-linecap="butt"
+        stroke-linejoin="miter"
+        stroke-miterlimit="4"
+        stroke-dasharray="none"
+        stroke-dashoffset="0"
+        stroke-opacity="1"
+        color-rendering="auto"
+        image-rendering="auto"
+        shape-rendering="auto"
+        text-rendering="auto"
+        stop-color="#000"
+      />
+    </g>
+    <g
+      transform="matrix(.026 0 0 .026 -66.154889 63.190634)"
+      id="derecho"
+      display="inline"
+      fill="#273849"
+      fill-opacity="1"
+      color="#000"
+      font-style="normal"
+      font-variant="normal"
+      font-weight="400"
+      font-stretch="normal"
+      font-size="medium"
+      font-family="sans-serif"
+      letter-spacing="normal"
+      word-spacing="normal"
+      writing-mode="lr-tb"
+      direction="ltr"
+      dominant-baseline="auto"
+      text-anchor="start"
+      clip-rule="nonzero"
+      visibility="visible"
+      color-interpolation="sRGB"
+      color-interpolation-filters="linearRGB"
+      fill-rule="nonzero"
+      stroke="none"
+      stroke-width="3.98984"
+      stroke-linecap="butt"
+      stroke-linejoin="miter"
+      stroke-miterlimit="4"
+      stroke-dasharray="none"
+      stroke-dashoffset="0"
+      stroke-opacity="1"
+      paint-order="fill markers stroke"
+      color-rendering="auto"
+      image-rendering="auto"
+      shape-rendering="auto"
+      text-rendering="auto"
+    >
+      <path
+        id="path1992-5"
+        style="line-height:normal;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000;text-transform:none;text-orientation:mixed;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;isolation:auto;mix-blend-mode:normal;solid-color:#000;solid-opacity:1"
+        d="M5547.9047-1324.2799c-21.6162-11.7585-43.2025-23.5747-64.7763-35.4133-21.6318-11.8703-43.252-23.7626-64.8793-35.6413l-588.6865 323.1912c-30.2745 16.6206-41.2668 54.3741-24.6462 84.64854 16.6213 30.27442 54.3742 41.26561 84.6486 24.64501z"
+        text-decoration="none"
+        baseline-shift="baseline"
+        display="inline"
+        overflow="visible"
+        vector-effect="none"
+        stop-color="#000"
+      />
+      <path
+        id="path1994-7"
+        d="M5633.6654-1382.7537c-16.6213 30.2744-54.3742 41.2665-84.6486 24.6459l-719.8891-395.2211c-30.2744-16.6206-41.2665-54.3742-24.6459-84.6486 16.6213-30.2744 54.3742-41.2658 84.6486-24.6452l719.8891 395.2211c30.2744 16.6206 41.2665 54.3735 24.6459 84.6479z"
+        style="line-height:normal;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000;text-transform:none;text-orientation:mixed;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;isolation:auto;mix-blend-mode:normal;solid-color:#000;solid-opacity:1"
+        text-decoration="none"
+        baseline-shift="baseline"
+        display="inline"
+        overflow="visible"
+        vector-effect="none"
+        stop-color="#000"
+      />
+    </g>
+  </svg>
 </template>
 
 <script>
 export default {
   name: "Logo",
-  data() {
-    return {
-      logo: true,
-    };
-  },
-  methods: {
-    showHide() {
-      this.logo = !this.logo;
-    },
-  },
 };
 </script>
