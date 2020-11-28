@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home.vue";
-import NotFound from "../views/NotFound.vue";
 
 const routes = [
   {
@@ -11,11 +10,11 @@ const routes = [
   {
     path: "/:notFound(.*)",
     name: "NotFound",
-    component: NotFound,
+    component: () => import("../views/NotFound.vue"),
   },
 ];
 
-linkActiveClass: "underline";
+// linkActiveClass: "underline";
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
