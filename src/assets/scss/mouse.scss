@@ -2,6 +2,7 @@
 
 .mouse-pointer {
   &-a {
+    opacity: 0;
     position: fixed;
     background-color: $color2;
     width: 10px;
@@ -13,6 +14,7 @@
     pointer-events: none;
   }
   &-b {
+    opacity: 0;
     background-color: $color1;
     position: fixed;
     width: 30px;
