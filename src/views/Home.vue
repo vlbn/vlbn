@@ -13,9 +13,9 @@
 </template>
 
 <script>
-import Logo from "@/components/Logo.vue";
-import Name from "@/components/Name.vue";
-import ContactData from "@/components/ContactData.vue";
+import Logo from "@/components/card/Logo.vue";
+import Name from "@/components/card/Name.vue";
+import ContactData from "@/components/card/ContactData.vue";
 
 export default {
   name: "Home",
