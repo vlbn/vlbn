@@ -1,8 +1,10 @@
 <template>
   <div class="centerXY fill-viewport-100" @mousemove="mousePointerAttach">
 
-    <div ref="mousePointerA" class="mouse-pointer-a"></div>
-    <div ref="mousePointerB" class="mouse-pointer-b"></div>
+    <div v-show="deviceDesktop">
+      <div ref="mousePointerA" class="mouse-pointer-a"></div>
+      <div ref="mousePointerB" class="mouse-pointer-b"></div>
+    </div>
 
     <div @mousedown="flipCard" class="pointer spot">
       <transition name="fade" mode="out-in">
@@ -25,9 +27,10 @@ import Name from "@/components/card/Name.vue";
 import ContactData from "@/components/card/ContactData.vue";
 
 import { mousePointer } from "@/mixins/mousePointer";
+import { mediaQueries } from "@/mixins/mediaQueries";
 
 export default {
-  mixins: [mousePointer],
+  mixins: [mousePointer, mediaQueries],
   name: "Home",
   components: {
     Logo,
