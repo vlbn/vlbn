@@ -1,5 +1,12 @@
 // cursor pointer
 
+.noPointer {
+  cursor: none;
+  a {
+    cursor: pointer;
+  }
+}
+
 .mouse-pointer {
   &-a {
     opacity: 0;
