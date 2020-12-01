@@ -15,9 +15,17 @@ export const mediaQueries = {
     this.handleDeviceOrientation(mediaQuery3);
   },
   computed: {
-    ...mapState(["deviceMobile", "deviceDesktop", "deviceOrientation"]),
+    ...mapState("mediaQueries", [
+      "deviceMobile",
+      "deviceDesktop",
+      "deviceOrientation",
+    ]),
   },
   methods: {
-    ...mapMutations(["handleDeviceMobile", "handleDeviceDesktop", "handleDeviceOrientation"]),
+    ...mapMutations("mediaQueries", [
+      "handleDeviceMobile",
+      "handleDeviceDesktop",
+      "handleDeviceOrientation",
+    ]),
   },
 };
