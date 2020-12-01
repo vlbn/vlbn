@@ -27,10 +27,10 @@ import Name from "@/components/card/Name.vue";
 import ContactData from "@/components/card/ContactData.vue";
 
 import { mousePointer } from "@/mixins/mousePointer";
-import { mediaQueries } from "@/mixins/mediaQueries";
+import { handleMediaQueries } from "@/mixins/handleMediaQueries";
 
 export default {
-  mixins: [mousePointer, mediaQueries],
+  mixins: [mousePointer, handleMediaQueries],
   name: "Home",
   components: {
     Logo,

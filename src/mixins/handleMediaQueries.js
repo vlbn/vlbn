@@ -1,6 +1,6 @@
 import { mapState, mapMutations } from "vuex";
 
-export const mediaQueries = {
+export const handleMediaQueries = {
   created() {
     const mediaQuery1 = window.matchMedia("(max-width: 1024px)");
     const mediaQuery2 = window.matchMedia("(min-width: 1025px)");

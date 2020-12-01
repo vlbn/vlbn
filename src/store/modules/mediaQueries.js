@@ -4,13 +4,6 @@ const state = () => ({
   deviceOrientation: null,
 });
 
-// getters
-const getters = {};
-
-// actions
-const actions = {};
-
-// mutations
 const mutations = {
   handleDeviceMobile(state, e) {
     state.deviceMobile = e.matches;
@@ -26,7 +19,5 @@ const mutations = {
 export default {
   namespaced: true,
   state,
-  getters,
-  actions,
   mutations,
 };
