@@ -13,10 +13,10 @@
 </template>
 
 <script>
-import { reusables } from "@/mixins/reusables";
+import { fadeTo } from "@/mixins/reusableFunctions";
 
 export default {
-  mixins: [reusables],
+  mixins: [fadeTo],
   name: "NotFound",
 };
 </script>

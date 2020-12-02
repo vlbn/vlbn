@@ -1,7 +1,7 @@
 import router from "@/router";
 import { gsap } from "gsap";
 
-export const reusables = {
+export const fadeTo = {
   methods: {
     fadeTo(destination, referencedObjectToBeFaded) {
       gsap.to(referencedObjectToBeFaded, { opacity: 0 }).then(function() {
