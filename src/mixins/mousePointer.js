@@ -9,11 +9,11 @@ export const mousePointer = {
       })
       .to(this.$refs.mousePointerB, 0, {
         zIndex: "-1",
-      })      
+      }, ">")      
       .to(this.$refs.mousePointerB, 0.4, {
-        scale: 2,
+        scale: 1.7,
         ease: "bounce",
-      })
+      }, ">")
       .reverse();
 
     var x = document.querySelectorAll(".pointer");
