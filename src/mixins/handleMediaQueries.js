@@ -8,24 +8,26 @@ export const handleMediaQueries = {
 
     mediaQuery1.addListener(this.handleDeviceMobile);
     mediaQuery2.addListener(this.handleDeviceDesktop);
-    mediaQuery3.addListener(this.handleDeviceOrientation);
+    mediaQuery3.addListener(this.handleDevicePortrait);
 
     this.handleDeviceMobile(mediaQuery1);
     this.handleDeviceDesktop(mediaQuery2);
-    this.handleDeviceOrientation(mediaQuery3);
+    this.handleDevicePortrait(mediaQuery3);
+
+    console.log("handling media queries");
   },
   computed: {
     ...mapState("mediaQueries", [
       "deviceMobile",
       "deviceDesktop",
-      "deviceOrientation",
+      "devicePortrait",
     ]),
   },
   methods: {
     ...mapMutations("mediaQueries", [
       "handleDeviceMobile",
       "handleDeviceDesktop",
-      "handleDeviceOrientation",
+      "handleDevicePortrait",
     ]),
   },
 };

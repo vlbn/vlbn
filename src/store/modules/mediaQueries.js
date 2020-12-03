@@ -1,7 +1,7 @@
 const state = () => ({
   deviceMobile: null,
   deviceDesktop: null,
-  deviceOrientation: null,
+  devicePortrait: null,
 });
 
 const mutations = {
@@ -11,8 +11,8 @@ const mutations = {
   handleDeviceDesktop(state, e) {
     state.deviceDesktop = e.matches;
   },
-  handleDeviceOrientation(state, e) {
-    state.deviceOrientation = e.matches;
+  handleDevicePortrait(state, e) {
+    state.devicePortrait = e.matches;
   },
 };
 
