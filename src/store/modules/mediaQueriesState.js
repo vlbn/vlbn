@@ -6,16 +6,16 @@ const state = () => ({
 });
 
 const mutations = {
-  handleDeviceMobile(state, e) {
+  setDeviceMobile(state, e) {
     state.deviceIsMobile = e.matches;
   },
-  handleDeviceDesktop(state, e) {
+  setDeviceDesktop(state, e) {
     state.deviceIsDesktop = e.matches;
   },
-  handleDevicePortrait(state, e) {
+  setDevicePortrait(state, e) {
     state.deviceIsPortrait = e.matches;
   },
-  handleDeviceLandscape(state, e) {
+  setDeviceLandscape(state, e) {
     state.deviceIsLandscape = e.matches;
   },  
 };
