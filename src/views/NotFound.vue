@@ -1,4 +1,7 @@
 <template>
+
+  <div v-show="deviceIsPortrait && !deviceIsDesktop" class="is-fixed-top-r">📲</div>
+
   <div
     class="centerXY fill-viewport-100 pointer"
     ref="notFound"
@@ -10,13 +13,15 @@
       <h2>👈</h2>
     </div>
   </div>
+
 </template>
 
 <script>
+import { deviceIs } from "@/mixins/deviceIs";
 import { fadeTo } from "@/mixins/reusableFunctions";
 
 export default {
-  mixins: [fadeTo],
+  mixins: [deviceIs, fadeTo],
   name: "NotFound",
 };
 </script>
