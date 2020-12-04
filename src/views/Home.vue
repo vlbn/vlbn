@@ -1,7 +1,7 @@
 <template>
   <div class="centerXY fill-viewport-100" @mousemove="mousePointerAttach">
 
-    <div v-show="deviceDesktop">
+    <div v-show="deviceIsDesktop">
       <div ref="mousePointerA" class="mouse-pointer-a"></div>
       <div ref="mousePointerB" class="mouse-pointer-b"></div>
     </div>
@@ -27,10 +27,10 @@ import Name from "@/components/card/Name.vue";
 import ContactData from "@/components/card/ContactData.vue";
 
 import { mousePointer } from "@/mixins/mousePointer";
-import { handleMediaQueries } from "@/mixins/handleMediaQueries";
+import { deviceIs } from "@/mixins/mediaQueries";
 
 export default {
-  mixins: [mousePointer, handleMediaQueries],
+  mixins: [mousePointer, deviceIs],
   name: "Home",
   components: {
     Logo,

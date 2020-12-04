@@ -1,9 +1,9 @@
 import { createStore } from "vuex";
 
-import mediaQueries from "./modules/mediaQueries";
+import mediaQueriesState from "./modules/mediaQueriesState";
 
 export default createStore({
   modules: {
-    mediaQueries,
+    mediaQueriesState,
   },
 });
