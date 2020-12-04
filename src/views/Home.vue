@@ -17,20 +17,20 @@
         </div>
       </transition>
     </div>
-
+    
   </div>
 </template>
 
 <script>
+import { deviceIs } from "@/mixins/deviceIs";
+import { mousePointer } from "@/mixins/mousePointer";
+
 import Logo from "@/components/card/Logo.vue";
 import Name from "@/components/card/Name.vue";
 import ContactData from "@/components/card/ContactData.vue";
 
-import { mousePointer } from "@/mixins/mousePointer";
-import { deviceIs } from "@/mixins/mediaQueries";
-
 export default {
-  mixins: [mousePointer, deviceIs],
+  mixins: [deviceIs, mousePointer],
   name: "Home",
   components: {
     Logo,
