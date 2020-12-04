@@ -1,22 +1,22 @@
 const state = () => ({
-  deviceMobile: null,
-  deviceDesktop: null,
-  devicePortrait: null,
-  deviceLandscape: null,
+  deviceIsMobile: null,
+  deviceIsDesktop: null,
+  deviceIsPortrait: null,
+  deviceIsLandscape: null,
 });
 
 const mutations = {
   handleDeviceMobile(state, e) {
-    state.deviceMobile = e.matches;
+    state.deviceIsMobile = e.matches;
   },
   handleDeviceDesktop(state, e) {
-    state.deviceDesktop = e.matches;
+    state.deviceIsDesktop = e.matches;
   },
   handleDevicePortrait(state, e) {
-    state.devicePortrait = e.matches;
+    state.deviceIsPortrait = e.matches;
   },
   handleDeviceLandscape(state, e) {
-    state.deviceLandscape = e.matches;
+    state.deviceIsLandscape = e.matches;
   },  
 };
 
