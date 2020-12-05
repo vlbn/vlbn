@@ -8,7 +8,7 @@ export const mousePointer = {
         scale: 0,
       })
       .to(this.$refs.mousePointerB, 0, {
-        zIndex: "-1",
+        zIndex: "1",
       }, ">")      
       .to(this.$refs.mousePointerB, 0.4, {
         scale: 1.7,

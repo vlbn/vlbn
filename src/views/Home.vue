@@ -6,24 +6,29 @@
       <div ref="mousePointerB" class="mouse-pointer-b"></div>
     </div>
 
-    <div @mousedown="flipCard" class="pointer spot">
+    <div class="pointer" @mousedown="flipCard">
       <transition name="fade" mode="out-in">
-        <div v-if="!flip">
-          <Logo />
-        </div>
-        <div v-else class="centerXY">
-          <Name class="mb-6" />
-          <ContactData class="mt-6 pointer" />
-        </div>
+
+        <base-card v-if="!flip" class="centerXY myCard-side-A">
+          <Logo class="logo"/>
+        </base-card>
+
+        <base-card v-else class="distributeXY myCard-side-B">
+          <template v-slot:top><Name /></template>
+          <template v-slot:bottom><ContactData /></template>
+        </base-card>
+
       </transition>
     </div>
-    
+
   </div>
 </template>
 
 <script>
 import { deviceIs } from "@/mixins/deviceIs";
 import { mousePointer } from "@/mixins/mousePointer";
+
+import BaseCard from "@/components/card/BaseCard.vue";
 
 import Logo from "@/components/card/Logo.vue";
 import Name from "@/components/card/Name.vue";
@@ -33,6 +38,7 @@ export default {
   mixins: [deviceIs, mousePointer],
   name: "Home",
   components: {
+    BaseCard,
     Logo,
     Name,
     ContactData,
