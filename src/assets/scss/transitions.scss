@@ -1,19 +1,19 @@
-// fade
+// flip
 
-.fade-enter-from,
-.fade-leave-to {
+.flip-enter-from,
+.flip-leave-to {
   opacity: .5;
   transform: translateZ( -150px) rotateX(45deg); 
 }
 
-.fade-enter-active,
-.fade-leave-active {
+.flip-enter-active,
+.flip-leave-active {
   transition: all .1s ease-out;
   animation: all .1s;
 }
 
-.fade-enter-to,
-.fade-leave-from {
+.flip-enter-to,
+.flip-leave-from {
   opacity: 1;
   transform: translateZ( 50px) rotateY(90deg); 
 }

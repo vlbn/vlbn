@@ -7,7 +7,7 @@
     </div>
 
     <div class="pointer" @mousedown="flipCard">
-      <transition name="fade" mode="out-in">
+      <transition name="flip" mode="out-in">
 
         <base-card v-if="!flip" class="centerXY myCard-side-A">
           <Logo class="logo"/>
