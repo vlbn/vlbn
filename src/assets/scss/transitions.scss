@@ -10,6 +10,7 @@
 .flip-leave-active {
   transition: all .1s ease-out;
   animation: all .1s;
+  filter: blur(5px);
 }
 
 .flip-enter-to,

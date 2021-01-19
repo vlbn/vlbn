@@ -1,5 +1,6 @@
 <template>
   <div class="centerXY fill-viewport-100" @mousemove="mousePointerAttach">
+    
     <div v-show="deviceIsDesktop">
       <div ref="mousePointerA" class="mouse-pointer-a"></div>
       <div ref="mousePointerB" class="mouse-pointer-b"></div>
@@ -21,6 +22,7 @@
         </base-card>
       </transition>
     </div>
+    
   </div>
 </template>
 
@@ -56,16 +58,10 @@ export default {
     perspectiva() {
       console.log("perspectiva..");
       gsap.to(this.$refs.theCard, 1, {
-
-		transformPerspective: 500,
-		transformOrigin: "center center 100",
-    
-    
+        //
       });
     },
   },
-  created() {
-
-  },
+  created() {},
 };
 </script>
