@@ -1,6 +1,6 @@
-<script lang="ts">
+<script setup lang="ts">
 
-import { ref, defineComponent } from "vue";
+import { ref } from "vue";
 
 import BaseCard from "@/components/card/BaseCard.vue";
 import Logo from "@/components/card/Logo.vue";
@@ -9,43 +9,22 @@ import ContactData from "@/components/card/ContactData.vue";
 
 import FancyCursor from "@/components/FancyCursor.vue";
 
-export default defineComponent({
-    name: 'portfolio',
-    components: {
-        [BaseCard.name]: BaseCard,
-        Logo,
-        Name,
-        ContactData,
-        FancyCursor,
-    },
+let flip = ref(false);
 
-    setup() {
-
-        let flip = ref(false);
-
-        function flipCard() {
-            flip.value = !flip.value;
-        };
-        return {
-            flip,
-            flipCard,
-            Logo,
-            Name,
-            ContactData,
-            FancyCursor,
-        }
-    }
-})
-
+function flipCard() {
+    flip.value = !flip.value;
+};
 
 </script>
 
 <template>
     <div class="centerXY fill-viewport-100">
+
         <FancyCursor />
 
         <div class="fancyCursor pointer myCard" ref="theCard" @mousedown="flipCard">
             <transition name="flip" mode="out-in" appear>
+
                 <BaseCard v-if="!flip" class="myCard-side-A">
                     <template #centro>
                         <Logo />
@@ -61,7 +40,9 @@ export default defineComponent({
                         <ContactData />
                     </template>
                 </BaseCard>
+
             </transition>
         </div>
+        
     </div>
 </template>
