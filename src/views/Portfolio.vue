@@ -22,7 +22,7 @@ function flipCard() {
 
         <FancyCursor />
 
-        <div class="fancyCursor pointer myCard" ref="theCard" @mousedown="flipCard">
+        <div class="pointer myCard" ref="theCard" @mousedown="flipCard">
             <transition name="flip" mode="out-in" appear>
 
                 <BaseCard v-if="!flip" class="myCard-side-A">
@@ -43,6 +43,6 @@ function flipCard() {
 
             </transition>
         </div>
-        
+
     </div>
 </template>
