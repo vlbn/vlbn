@@ -1,5 +1,24 @@
+$green: #42b983;
+$blue: #273849;
+$paper: #f6f6f6;
+$grey: #d4d4d4;
+
+@import url("https://fonts.googleapis.com/css2?family=Manjari:wght@100;400;700&display=swap");
+
+html {
+  overflow: hidden;
+}
+
+body {
+  font-family: "Manjari", sans-serif;
+  background-color: white;
+  font-weight: 400;
+  color: $blue;
+}
+
 a {
   outline: none !important;
+  color: $green !important;
   img {
     outline: none !important;
   }
@@ -9,50 +28,14 @@ img {
   border: 0 !important;
 }
 
-body {
-  line-height: normal;
+mark {
+  background-color: $green;
+  color: white;
+  padding: 0.1rem 0.3rem;
 }
 
 .pointer {
   cursor: pointer;
-}
-
-mark {
-  background-color: $color2;
-  color: $color3;
-  padding: 0.1rem 0.3rem;
-}
-
-.myCard {
-  &-side {
-    &-A {
-      background-color: $color1;
-      min-height: 190px;
-      max-height: 190px;
-      max-width: 340px;
-      min-width: 340px;
-    }
-    &-B {
-      background-color: $color5;
-      min-height: 340px;
-      max-height: 340px;
-      max-width: 190px;
-      min-width: 190px;
-    }
-  }
-}
-
-.logo {
-  g {
-    fill: $color5 !important;
-  }
-}
-
-.centerXY {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-flow: column wrap;
 }
 
 .distributeXY {
@@ -62,23 +45,11 @@ mark {
   flex-flow: column wrap;
 }
 
-.zi {
-  &-1 {
-    z-index: 1;
-  }
-
-  &-2 {
-    z-index: 2;
-  }
-}
-
-.overflow-hidden {
-  &-x {
-    overflow-x: hidden;
-  }
-  &-y {
-    overflow-y: hidden;
-  }
+.centerXY {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column wrap;
 }
 
 .underline {
@@ -88,23 +59,94 @@ mark {
 
 .circle {
   &-1 {
-    border: solid $color4 1px;
+    border: solid $grey 1px;
     border-radius: 50%;
     height: 70px;
     width: 70px;
   }
 }
 
-.modal-close {
-  visibility: hidden;
+// viewport
+.fill-viewport {
+  &-100 {
+    min-height: 100vh;
+  }
+  &-90 {
+    min-height: 90vh;
+  }
+  &-80 {
+    min-height: 80vh;
+  }
+  &-70 {
+    min-height: 70vh;
+  }
+  &-60 {
+    min-height: 60vh;
+  }
+  &-50 {
+    min-height: 50vh;
+  }
+  &-10 {
+    min-height: 10vh;
+  }
 }
 
-.b-radio {
-  margin-right: 2em !important;
+// fixed
+.is-fixed {
+  &-0 {
+    position: fixed;
+  }
+  &-top-right {
+    position: fixed;
+    top: 0.75rem;
+    right: 0.75rem;
+  }
+  &-top-left {
+    position: fixed;
+    top: 0.75rem;
+    left: 0.75rem;
+  }
+  &-bottom {
+    position: fixed;
+    bottom: 0.75rem;
+    &-r {
+      position: fixed;
+      right: 1.3rem;
+      bottom: 0.3rem;
+    }
+  }
 }
 
-// navigation: 3 horizontal/vertical centered items
+// borders
+.border {
+  border-top: solid $grey 0.1px;
+  border-left: solid $grey 0.1px;
+  border-right: solid $grey 0.1px;
+  border-bottom: solid $grey 0.1px;
+  &-0 {
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 0px;
+  }
+  &-t {
+    border-top: solid $grey 0.1px;
+  }
+  &-l {
+    border-left: solid $grey 0.1px;
+  }
+  &-r {
+    border-right: solid $grey 0.1px;
+  }
+  &-b {
+    border-bottom: solid $grey 0.1px;
+    &-1 {
+      border-bottom: solid $grey 0.1px;
+    }
+  }
+}
 
+// navigation
 .navi {
   &-item {
     display: inline-flex;
@@ -121,170 +163,10 @@ mark {
   &-left {
     display: inline-flex;
     justify-content: flex-start;
-    h1 {
-      margin-block-end: -0.4em;
-      line-height: 0%;
-    }
-    small {
-      line-height: 0%;
-      margin-block-end: -0.6em;
-    }
-    a {
-      line-height: 0%;
-      margin-block-end: -0.005em;
-    }
-  }
-  &-image {
-    svg {
-      vertical-align: -0.4em;
-    }
-    div {
-      padding-top: 0.2em;
-    }
   }
   &-active {
     text-decoration: underline;
     text-underline-position: under;
-    color: $color2;
-  }
-}
-
-// borders
-
-.border {
-  border-top: solid $color4 0.1px;
-  border-left: solid $color4 0.1px;
-  border-right: solid $color4 0.1px;
-  border-bottom: solid $color4 0.1px;
-  &-0 {
-    border-top: 0px;
-    border-left: 0px;
-    border-right: 0px;
-    border-bottom: 0px;
-  }
-  &-t {
-    border-top: solid $color4 0.1px;
-  }
-  &-l {
-    border-left: solid $color4 0.1px;
-  }
-  &-r {
-    border-right: solid $color4 0.1px;
-  }
-  &-b {
-    border-bottom: solid $color4 0.1px;
-  }
-}
-
-// fixed positions
-
-.is-fixed {
-  &-top {
-    &-r {
-      position: fixed;
-      top: 0.75rem;
-      right: 0.75rem;
-    }
-    &-l {
-      position: fixed;
-      top: 0.75rem;
-      left: 0.75rem;
-    }
-  }
-  &-bottom {
-    &-r {
-      position: fixed;
-      right: 1.3rem;
-      bottom: 0.3rem;
-    }
-    &-l {
-      position: fixed;
-      left: 1.3rem;
-      bottom: 0.3rem;
-    }
-  }
-}
-
-// fill vertical viewport
-
-.fill-viewport {
-  &-100 {
-    min-height: 100vh;
-  }
-
-  &-90 {
-    min-height: 91vh;
-  }
-
-  &-80 {
-    min-height: 80vh;
-  }
-
-  &-70 {
-    min-height: 70vh;
-  }
-
-  &-60 {
-    min-height: 60vh;
-  }
-
-  &-50 {
-    min-height: 50vh;
-  }
-
-  &-10 {
-    min-height: 12vh;
-  }
-}
-
-// padding
-
-.p {
-  &-0 {
-    padding: 0rem;
-  }
-  &-1 {
-    padding: 0.25rem;
-  }
-  &-2 {
-    padding: 0.5rem;
-  }
-  &-3 {
-    padding: 0.75rem;
-  }
-  &-4 {
-    padding: 1rem;
-  }
-  &-5 {
-    padding: 1.5rem;
-  }
-  &-6 {
-    padding: 3rem;
-  }
-}
-
-// margin
-
-.m {
-  &-0 {
-    margin: 0rem;
-  }
-  &-1 {
-    margin: 0.25rem;
-  }
-  &-2 {
-    margin: 0.5rem;
-  }
-  &-3 {
-    margin: 0.75rem;
-  }
-  &-4 {
-    margin: 1rem;
-  }
-  &-5 {
-    margin: 1.5rem;
-  }
-  &-6 {
-    margin: 3rem;
+    color: $green;
   }
 }

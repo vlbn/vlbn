@@ -1,11 +1,7 @@
 <template>
-  <router-view />
+  <router-view v-slot="{ Component }">
+    <transition name="fade">
+      <component :is="Component" />
+    </transition>
+  </router-view>
 </template>
-
-<script>
-import { mediaQueries } from "@/mixins/mediaQueries";
-
-export default {
-  mixins: [mediaQueries],
-};
-</script>
