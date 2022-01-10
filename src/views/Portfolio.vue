@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 
 import { ref } from "vue";
 
@@ -19,10 +19,11 @@ function flipCard() {
 
 <template>
     <div class="centerXY fill-viewport-100">
-
+    
         <FancyCursor />
 
         <div class="pointer myCard" ref="theCard" @mousedown="flipCard">
+
             <transition name="flip" mode="out-in" appear>
 
                 <BaseCard v-if="!flip" class="myCard-side-A">
@@ -30,7 +31,7 @@ function flipCard() {
                         <Logo />
                     </template>
                 </BaseCard>
-
+                
                 <BaseCard v-else class="myCard-side-B">
                     <template #arriba>
                         <Name />
@@ -42,7 +43,7 @@ function flipCard() {
                 </BaseCard>
 
             </transition>
-        </div>
 
+        </div>
     </div>
 </template>
