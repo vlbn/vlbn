@@ -1,13 +1,14 @@
 <template>
-  <div class="box">
-    <slot name="top"></slot>
-    <slot></slot>
-    <slot name="bottom"></slot>
+  <div>
+    <slot name="arriba"></slot>
+    <slot name="centro"></slot>
+    <slot name="abajo"></slot>
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from "vue";
+export default defineComponent({
   name: "BaseCard",
-};
+});
 </script>

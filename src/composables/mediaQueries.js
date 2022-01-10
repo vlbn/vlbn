@@ -1,4 +1,3 @@
-import { mapMutations } from "vuex";
 
 export const mediaQueries = {
   created() {
@@ -23,6 +22,17 @@ export const mediaQueries = {
       "setDeviceDesktop",
       "setDevicePortrait",
       "setDeviceLandscape",
+    ]),
+  },
+};
+
+export const deviceIs = {
+  computed: {
+    ...mapState("mediaQueriesState", [
+      "deviceIsMobile",
+      "deviceIsDesktop",
+      "deviceIsPortrait",
+      "deviceIsLandscape",
     ]),
   },
 };

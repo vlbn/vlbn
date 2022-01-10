@@ -1,23 +1,25 @@
 import { createRouter, createWebHistory } from "vue-router";
-import Home from "../views/Home.vue";
 
 const routes = [
   {
     path: "/",
-    name: "Home",
-    component: Home,
+    name: "portfolio",
+    component: () => import("../views/Portfolio.vue"),
   },
   {
-    path: "/:notFound(.*)",
-    name: "NotFound",
-    component: () => import("../views/NotFound.vue"),
+    path: "/control",
+    name: "control",
+    component: () => import("../views/Control.vue"),
+  },
+  {
+    path: "/:catchAll(.*)",
+    name: "hmmm",
+    component: () => import("../views/Hmmm.vue"),
   },
 ];
 
-// linkActiveClass: "underline";
-
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
+  history: createWebHistory(),
   routes,
 });
 
