@@ -4,7 +4,7 @@
     <canvas class="canvas"></canvas>
 </template>
 
-<script setup lang="ts">
+<script setup>
 
 import { ref, onMounted } from "vue";
 
@@ -20,7 +20,7 @@ let fancyTl = gsap.timeline({ paused: true });
 const cursorIn = () => fancyTl.play();
 const cursorOut = () => fancyTl.reverse();
 
-const cursorAttach = ($event: { clientX: any; clientY: any; }) => {
+const cursorAttach = ($event) => {
     gsap.set(".cursor-a", {
         x: $event.clientX,
         y: $event.clientY,

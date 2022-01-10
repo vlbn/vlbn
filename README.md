@@ -1,2 +1,2 @@
 # valbuena
-🧙‍♂️ personal website under development
+🧙‍♂️ personal website

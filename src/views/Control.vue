@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 
 // piña🍍
 import { storeToRefs } from "pinia";
@@ -10,13 +10,14 @@ const { isLoggedIn, user } = storeToRefs(main);
 
 <template>
     <div class="fill-viewport-100 centerXY">
+    
         <Transition name="flip" mode="out-in" appear>
             <div class="control centerXY" v-if="isLoggedIn">
                 <mark>
                     welcome to
                     <strong>{{ $route.name }}</strong>
                 </mark>
-                <img :src="user.avatar" :alt="user.name" :title="user.name" />
+                <div class="circle-1" :style="{'background-image': 'url(' + user.avatar + ')'}" ></div>
                 <h1>{{ user.name }}</h1>
                 <h2>{{ user.id }}</h2>
                 <h3>{{ user.email }}</h3>
@@ -28,6 +29,7 @@ const { isLoggedIn, user } = storeToRefs(main);
                 <button class="button-33" role="button" @click="main.setIsLoggedIn(true)">ON</button>
             </div>
         </Transition>
+
     </div>
 </template>
 
