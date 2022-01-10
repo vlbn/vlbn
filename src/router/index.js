@@ -4,17 +4,17 @@ const routes = [
   {
     path: "/",
     name: "portfolio",
-    component: () => import("@/views/Portfolio.vue"),
+    component: () => import("../views/Portfolio.vue"),
   },
   {
     path: "/control",
     name: "control",
-    component: () => import("@/views/Control.vue"),
+    component: () => import("../views/Control.vue"),
   },
   {
     path: "/:catchAll(.*)",
     name: "hmmm",
-    component: () => import("@/views/Hmmm.vue"),
+    component: () => import("../views/Hmmm.vue"),
   },
 ];
 

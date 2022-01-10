@@ -2,12 +2,12 @@
 
 import { ref } from "vue";
 
-import BaseCard from "@/components/card/BaseCard.vue";
-import Logo from "@/components/card/Logo.vue";
-import Name from "@/components/card/Name.vue";
-import ContactData from "@/components/card/ContactData.vue";
+import BaseCard from "../components/card/BaseCard.vue";
+import Logo from "../components/card/Logo.vue";
+import Name from "../components/card/Name.vue";
+import ContactData from "../components/card/ContactData.vue";
 
-import FancyCursor from "@/components/FancyCursor.vue";
+import FancyCursor from "../components/FancyCursor.vue";
 
 let flip = ref(false);
 

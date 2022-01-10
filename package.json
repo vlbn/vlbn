@@ -1,29 +1,21 @@
 {
   "name": "valbuena",
-  "version": "0.0.3",
-  "engines": {
-    "npm": ">=8.0.0",
-    "node": ">=14.0.0"
-  },  
+  "version": "0.0.8",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
-    "serve": "vite preview"
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "gsap": "^3.7.1",
-    "pinia": "^2.0.8",
-    "sass": "^1.44.0",
-    "vue": "^3.2.22",
+    "@heroicons/vue": "^1.0.5",
+    "gsap": "^3.9.1",
+    "pinia": "^2.0.9",
+    "sass": "^1.47.0",
+    "vue": "^3.2.25",
     "vue-router": "^4.0.12"
   },
   "devDependencies": {
-    "@heroicons/vue": "^1.0.5",
-    "@types/node": "^17.0.8",
-    "@vitejs/plugin-vue": "^1.9.3",
-    "@vue/compiler-sfc": "^3.2.22",
-    "typescript": "^4.4.3",
-    "vite": "^2.6.4",
-    "vue-tsc": "^0.3.0"
+    "@vitejs/plugin-vue": "^2.0.0",
+    "vite": "^2.7.2"
   }
 }

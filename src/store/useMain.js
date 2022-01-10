@@ -14,10 +14,10 @@ export const useMainStore = defineStore("main", {
     }),
 
     actions: {
-        setUser(value: any) {
+        setUser(value) {
             this.user = value
         },
-        setIsLoggedIn(value: boolean) {
+        setIsLoggedIn(value) {
             this.isLoggedIn = value
         }
     }

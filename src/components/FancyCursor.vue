@@ -10,23 +10,10 @@ import { ref, onMounted } from "vue";
 
 import { gsap } from "gsap";
 
-interface props {
-    theme?: string;
-    trigger?: string;
-}
 
-const props = withDefaults(defineProps<props>(), {
-    theme: "vlbn",
-    trigger: ".pointer",
-});
+const cursorA = ref("blue");
+const cursorB = ref("green");
 
-const cursorA = ref();
-const cursorB = ref();
-
-if (props.theme == "vlbn") {
-    cursorA.value = "blue"
-    cursorB.value = "green"
-}
 
 let fancyTl = gsap.timeline({ paused: true });
 
@@ -60,7 +47,7 @@ window.addEventListener("mousemove", cursorAttach);
 
 onMounted(() => {
 
-    let iTrigger = document.querySelectorAll(props.trigger);
+    let iTrigger = document.querySelectorAll(".pointer");
 
     for (let i = 0; i < iTrigger.length; i++) {
         iTrigger[i].addEventListener("mouseover", cursorIn);
