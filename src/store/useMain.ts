@@ -17,6 +17,9 @@ export const useMainStore = defineStore("main", {
         setUser(value: any) {
             this.user = value
         },
+        setIsLoggedIn(value: boolean) {
+            this.isLoggedIn = value
+        }
     }
 
 });
