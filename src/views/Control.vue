@@ -17,7 +17,7 @@ const { isLoggedIn, user } = storeToRefs(main);
                     welcome to
                     <strong>{{ $route.name }}</strong>
                 </mark>
-                <div class="circle-1" :style="{'background-image': 'url(' + user.avatar + ')'}" ></div>
+                <div class="circle-1 circle-shdw" :style="{'background-image': 'url(' + user.avatar + ')'}" ></div>
                 <h1>{{ user.name }}</h1>
                 <h2>{{ user.id }}</h2>
                 <h3>{{ user.email }}</h3>
