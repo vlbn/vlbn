@@ -19,10 +19,13 @@ function flipCard() {
 
 <template>
     <div class="centerXY fill-viewport-100">
-    
+
         <FancyCursor />
 
-        <div class="pointer myCard" ref="theCard" @mousedown="flipCard">
+        <div
+            class="pointer myCard"
+            @mousedown="flipCard"
+        >
 
             <transition name="flip" mode="out-in" appear>
 
@@ -31,12 +34,11 @@ function flipCard() {
                         <Logo />
                     </template>
                 </BaseCard>
-                
+
                 <BaseCard v-else class="myCard-side-B">
                     <template #arriba>
                         <Name />
                     </template>
-
                     <template #abajo>
                         <ContactData />
                     </template>
