@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@heroicons/vue": "^1.0.5",
+    "axios": "^0.24.0",
     "gsap": "^3.9.1",
     "pinia": "^2.0.9",
     "sass": "^1.47.0",
