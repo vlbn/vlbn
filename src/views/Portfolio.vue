@@ -47,5 +47,6 @@ function flipCard() {
             </transition>
 
         </div>
+        
     </div>
 </template>
