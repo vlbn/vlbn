@@ -1,5 +1,7 @@
 <script setup>
 
+import Kanye from "../components/apis/Kanye.vue";
+
 // piña🍍
 import { storeToRefs } from "pinia";
 import { useMainStore } from "../store/useMain";
@@ -10,24 +12,32 @@ const { isLoggedIn, user } = storeToRefs(main);
 
 <template>
     <div class="fill-viewport-100 centerXY">
-    
+
         <Transition name="flip" mode="out-in" appear>
+
             <div class="control centerXY" v-if="isLoggedIn">
                 <mark>
                     welcome to
                     <strong>{{ $route.name }}</strong>
                 </mark>
-                <div class="circle-1 circle-shdw" :style="{'background-image': 'url(' + user.avatar + ')'}" ></div>
+                <div
+                    class="circle-1 circle-shdw"
+                    :style="{ 'background-image': 'url(' + user.avatar + ')' }"
+                ></div>
                 <h1>{{ user.name }}</h1>
                 <h2>{{ user.id }}</h2>
                 <h3>{{ user.email }}</h3>
                 <hr />
                 <button class="button-52" role="button" @click="main.setIsLoggedIn(false)">OFF</button>
             </div>
-            <div v-else class="pointer">
-                <mark @click="$router.push('/')">🧙‍♂️ you shall not pass!</mark>
+
+            <div v-else>
+                <mark class="mr-1">🧙‍♂️ you shall not pass!</mark>
                 <button class="button-33" role="button" @click="main.setIsLoggedIn(true)">ON</button>
+                <br>
+                <h1 class="p-1"><Kanye /></h1>
             </div>
+
         </Transition>
 
     </div>
