@@ -1,10 +1,16 @@
 <script setup>
 
+import router from "../router";
+
 import {
     ArrowNarrowLeftIcon,
 } from "@heroicons/vue/outline";
 
 import Kanye from "../components/apis/Kanye.vue";
+
+const goTo = (value) => {
+    router.push(value)
+}
 
 // piña🍍
 import { storeToRefs } from "pinia";
@@ -18,7 +24,7 @@ const { isLoggedIn, user } = storeToRefs(main);
     <div class="fill-viewport-100 centerXY">
 
         <div class="pointer">
-            <ArrowNarrowLeftIcon class="icono is-fixed-top-left" @click="this.$router.push('/')" />
+            <ArrowNarrowLeftIcon class="icono is-fixed-top-left" @click="goTo('/')" />
         </div>
 
         <Transition name="flip" mode="out-in" appear>
@@ -47,7 +53,7 @@ const { isLoggedIn, user } = storeToRefs(main);
                 </h1>
             </div>
         </Transition>
-
+        
     </div>
 </template>
 
