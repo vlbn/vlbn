@@ -2,6 +2,8 @@
 
 import { ref } from "vue";
 
+import router from "../router";
+
 import {
     ExclamationIcon,
 } from "@heroicons/vue/outline";
@@ -19,6 +21,10 @@ function flipCard() {
     flip.value = !flip.value;
 };
 
+const goTo = (value) =>{
+    router.push(value)
+}
+
 </script>
 
 <template>
@@ -29,7 +35,7 @@ function flipCard() {
         <div class="pointer">
             <ExclamationIcon
                 class="icono is-fixed-bottom-r"
-                @click="this.$router.push('/control')"
+                @click="goTo('/control')"
             />
         </div>
 
