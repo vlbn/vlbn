@@ -1,5 +1,9 @@
 <script setup>
 
+import {
+    ArrowNarrowLeftIcon,
+} from "@heroicons/vue/outline";
+
 import Kanye from "../components/apis/Kanye.vue";
 
 // piña🍍
@@ -13,15 +17,18 @@ const { isLoggedIn, user } = storeToRefs(main);
 <template>
     <div class="fill-viewport-100 centerXY">
 
-        <Transition name="flip" mode="out-in" appear>
+        <div class="pointer">
+            <ArrowNarrowLeftIcon class="icono is-fixed-top-left" @click="this.$router.push('/')" />
+        </div>
 
+        <Transition name="flip" mode="out-in" appear>
             <div class="control centerXY" v-if="isLoggedIn">
                 <mark>
                     welcome to
                     <strong>{{ $route.name }}</strong>
                 </mark>
                 <div
-                    class="circle-1 circle-shdw"
+                    class="circle-170 shadow-1"
                     :style="{ 'background-image': 'url(' + user.avatar + ')' }"
                 ></div>
                 <h1>{{ user.name }}</h1>
@@ -34,10 +41,11 @@ const { isLoggedIn, user } = storeToRefs(main);
             <div v-else>
                 <mark class="mr-1">🧙‍♂️ you shall not pass!</mark>
                 <button class="button-33" role="button" @click="main.setIsLoggedIn(true)">ON</button>
-                <br>
-                <h1 class="p-1"><Kanye /></h1>
+                <br />
+                <h1 class="p-1">
+                    <Kanye />
+                </h1>
             </div>
-
         </Transition>
 
     </div>

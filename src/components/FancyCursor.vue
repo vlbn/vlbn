@@ -40,7 +40,7 @@ const cursorAttach = ($event) => {
         autoAlpha: 1,
         x: $event.clientX,
         y: $event.clientY,
-    });   
+    });
 }
 
 window.addEventListener("mousemove", cursorAttach);
