@@ -1,5 +1,7 @@
 <script setup>
+
 import { ref } from "vue";
+
 import KanyeAPI from "../../services/KanyeAPI";
 
 const quote = ref('');
@@ -14,7 +16,6 @@ const loadQuote = async () => {
 }
 
 loadQuote()
-
 
 </script>
 
