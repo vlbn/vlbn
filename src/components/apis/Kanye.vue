@@ -2,7 +2,7 @@
 
 import { ref } from "vue";
 
-import KanyeAPI from "../../services/KanyeAPI";
+import KanyeAPI from "@/services/KanyeAPI";
 
 const quote = ref('');
 
