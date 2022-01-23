@@ -2,18 +2,18 @@
 
 import { ref } from "vue";
 
-import router from "../router";
+import router from "@/router";
 
 import {
     ExclamationIcon,
 } from "@heroicons/vue/outline";
 
-import BaseCard from "../components/card/BaseCard.vue";
-import Logo from "../components/card/Logo.vue";
-import Name from "../components/card/Name.vue";
-import ContactData from "../components/card/ContactData.vue";
+import BaseCard from "@/components/card/BaseCard.vue";
+import Logo from "@/components/card/Logo.vue";
+import Name from "@/components/card/Name.vue";
+import ContactData from "@/components/card/ContactData.vue";
 
-import FancyCursor from "../components/FancyCursor.vue";
+import FancyCursor from "@/components/FancyCursor.vue";
 
 let flip = ref(false);
 
@@ -21,7 +21,7 @@ function flipCard() {
     flip.value = !flip.value;
 };
 
-const goTo = (value) =>{
+const goTo = (value) => {
     router.push(value)
 }
 
@@ -33,10 +33,7 @@ const goTo = (value) =>{
         <FancyCursor />
 
         <div class="pointer">
-            <ExclamationIcon
-                class="icono is-fixed-bottom-r"
-                @click="goTo('/control')"
-            />
+            <ExclamationIcon class="icono is-fixed-bottom-r" @click="goTo('/control')" />
         </div>
 
         <div class="pointer myCard" @mousedown="flipCard">

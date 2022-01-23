@@ -1,12 +1,12 @@
 <script setup>
 
-import router from "../router";
+import router from "@/router";
 
 import {
     ArrowNarrowLeftIcon,
 } from "@heroicons/vue/outline";
 
-import Kanye from "../components/apis/Kanye.vue";
+import Kanye from "@/components/apis/Kanye.vue";
 
 const goTo = (value) => {
     router.push(value)
@@ -14,7 +14,7 @@ const goTo = (value) => {
 
 // piña🍍
 import { storeToRefs } from "pinia";
-import { useMainStore } from "../store/useMain";
+import { useMainStore } from "@/store/useMain";
 const main = useMainStore();
 const { isLoggedIn, user } = storeToRefs(main);
 
@@ -22,7 +22,6 @@ const { isLoggedIn, user } = storeToRefs(main);
 
 <template>
     <div class="fill-viewport-100 centerXY">
-
         <div class="pointer">
             <ArrowNarrowLeftIcon class="icono is-fixed-top-left" @click="goTo('/')" />
         </div>
@@ -53,7 +52,6 @@ const { isLoggedIn, user } = storeToRefs(main);
                 </h1>
             </div>
         </Transition>
-        
     </div>
 </template>
 
