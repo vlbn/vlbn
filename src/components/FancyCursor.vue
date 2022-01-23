@@ -6,7 +6,7 @@
 
 <script setup>
 
-import { ref, onMounted } from "vue";
+import { ref, onMounted, onBeforeUnmount } from "vue";
 
 import { gsap } from "gsap";
 
@@ -78,6 +78,10 @@ onMounted(() => {
         }, ">")
         .reverse();
 
+})
+
+onBeforeUnmount(() => {
+   window.removeEventListener("mousemove", cursorAttach);
 })
 
 </script>
