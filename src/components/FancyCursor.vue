@@ -10,10 +10,13 @@ import { ref, onMounted, onBeforeUnmount } from "vue";
 
 import { gsap } from "gsap";
 
+const props = defineProps({
+    trigger: { type: String, default: "a" },
+    fanciness: { type: Boolean, default: false },
+});
 
 const cursorA = ref("blue");
 const cursorB = ref("green");
-
 
 let fancyTl = gsap.timeline({ paused: true });
 
@@ -47,7 +50,7 @@ window.addEventListener("mousemove", cursorAttach);
 
 onMounted(() => {
 
-    let iTrigger = document.querySelectorAll(".pointer");
+    let iTrigger = document.querySelectorAll(props.trigger);
 
     for (let i = 0; i < iTrigger.length; i++) {
         iTrigger[i].addEventListener("mouseover", cursorIn);
@@ -81,7 +84,12 @@ onMounted(() => {
 })
 
 onBeforeUnmount(() => {
-   window.removeEventListener("mousemove", cursorAttach);
+    window.removeEventListener("mousemove", cursorAttach);
+    gsap.to(".cursor-b", {
+        duration: 1.3,
+        scale: 100,
+        autoAlpha: 0,
+    });
 })
 
 </script>
