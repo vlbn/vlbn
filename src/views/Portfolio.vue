@@ -29,8 +29,7 @@ const goTo = (value) => {
 
 <template>
     <div class="centerXY fill-viewport-100">
-    
-        <FancyCursor />
+        <FancyCursor trigger=".pointer" />
 
         <div class="pointer">
             <ExclamationIcon class="icono is-fixed-bottom-r" @click="goTo('/control')" />
@@ -53,6 +52,5 @@ const goTo = (value) => {
                 </BaseCard>
             </transition>
         </div>
-
     </div>
 </template>
