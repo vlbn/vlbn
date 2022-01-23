@@ -29,7 +29,6 @@ const goTo = (value) => {
 
 <template>
     <div class="centerXY fill-viewport-100">
-    
         <FancyCursor />
 
         <div class="pointer">
@@ -53,6 +52,5 @@ const goTo = (value) => {
                 </BaseCard>
             </transition>
         </div>
-
     </div>
 </template>
