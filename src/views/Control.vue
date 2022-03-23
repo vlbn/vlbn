@@ -2,9 +2,9 @@
 import { watch } from "vue";
 import { useRouter } from "vue-router";
 
-import { ArrowNarrowLeftIcon } from "@heroicons/vue/outline";
-
 import Kanye from "@/components/apis/Kanye.vue";
+
+import { ArrowNarrowLeftIcon } from "@heroicons/vue/outline";
 
 // piña🍍
 import { storeToRefs } from "pinia";
@@ -12,9 +12,8 @@ import { theUser } from "@/stores/theUser";
 const tU = theUser();
 const { isLoggedIn, user } = storeToRefs(tU);
 
-const router = useRouter();
-
 // nav
+const router = useRouter();
 const goTo = (value) => {
   router.push(value);
 };
