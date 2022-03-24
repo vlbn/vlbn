@@ -1,47 +1,39 @@
 <script setup>
-import { ref, watchEffect } from "vue";
+import { ref } from "vue";
+import { useRouter } from "vue-router";
 
-import router from "@/router";
-
-import { ExclamationIcon } from "@heroicons/vue/outline";
-
+import FancyCursor from "@/components/FancyCursor.vue";
 import BaseCard from "@/components/card/BaseCard.vue";
 import Logo from "@/components/card/Logo.vue";
 import Name from "@/components/card/Name.vue";
 import ContactData from "@/components/card/ContactData.vue";
 
-import FancyCursor from "@/components/FancyCursor.vue";
+import { ExclamationIcon } from "@heroicons/vue/outline";
 
+import mediaQueries from "@/composables/mediaQueries";
+const { deviceIs, orientationIs } = mediaQueries();
+
+// nav
+const router = useRouter();
+const goTo = (destination) => {
+  router.push(destination);
+};
+
+// flip-flop
 let flip = ref(false);
-
 function flipCard() {
   flip.value = !flip.value;
 }
-
-const goTo = (value) => {
-  router.push(value);
-};
-
-const mobile = window.matchMedia("(max-width: 1024px)");
-const tablet = window.matchMedia("(min-width: 1025px)");
-const portrait = window.matchMedia("(orientation: portrait)");
-const landscape = window.matchMedia("(orientation: landscape)");
-
-watchEffect(() => {
-  portrait.onchange = function () {
-    console.log("jojojo");
-  };
-});
 </script>
 
 <template>
   <div class="centerXY fill-viewport-100">
-    <FancyCursor trigger=".pointer" />
-
-    <div class="pointer">
+    <div v-if="deviceIs == `desktop`">
+      <FancyCursor trigger=".pointer" />
+    </div>
+    <div class="pointer" v-if="deviceIs == `mobile`">
       <ExclamationIcon class="icono is-fixed-bottom-r" @click="goTo('/control')" />
     </div>
-
     <div class="pointer myCard" @mousedown="flipCard">
       <transition name="flip" mode="out-in" appear>
         <BaseCard v-if="!flip" class="myCard-side-A">
