@@ -17,6 +17,10 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
 body {
   margin: 0px;
   padding: 0px;
@@ -41,7 +45,8 @@ img {
 mark {
   background-color: $green;
   color: white;
-  padding: 0.1rem 0.3rem;
+  padding: 0.2rem 0.3rem 0.1rem 0.3rem;
+  margin: 0rem 0rem 3rem 0rem;
 }
 
 .pointer {
@@ -186,34 +191,6 @@ mark {
     text-decoration: underline;
     text-underline-position: under;
     color: $green;
-  }
-}
-
-// padding
-.p {
-  &-0 {
-    padding: 0rem;
-  }
-  &-1 {
-    padding: 1rem;
-  }
-}
-
-.m {
-  &-0 {
-    margin: 0rem;
-  }
-  &-1 {
-    margin: 1rem;
-  }
-}
-
-.mr {
-  &-0 {
-    margin-right: 0rem;
-  }
-  &-1 {
-    margin-right: 1rem;
   }
 }
 
