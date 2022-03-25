@@ -27,20 +27,31 @@ function flipCard() {
 </script>
 
 <template>
+
+  <div class="p-2 mx-2 is-fixed-0">
+    <div class="my-2">orientation <mark>{{ orientationIs }}</mark></div>
+    <div class="my-2">device <mark>{{ deviceIs }}</mark></div>
+  </div>
+
   <div class="centerXY fill-viewport-100">
+
     <div v-if="deviceIs == `desktop`">
       <FancyCursor trigger=".pointer" />
     </div>
+
     <div class="pointer" v-if="deviceIs == `mobile`">
       <ExclamationIcon class="icono is-fixed-bottom-r" @click="goTo('/control')" />
     </div>
+
     <div class="pointer myCard" @mousedown="flipCard">
       <transition name="flip" mode="out-in" appear>
+      
         <BaseCard v-if="!flip" class="myCard-side-A">
           <template #centro>
             <Logo />
           </template>
         </BaseCard>
+
         <BaseCard v-else class="myCard-side-B">
           <template #arriba>
             <Name />
@@ -49,7 +60,10 @@ function flipCard() {
             <ContactData />
           </template>
         </BaseCard>
+
       </transition>
     </div>
+
   </div>
+
 </template>
