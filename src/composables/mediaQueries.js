@@ -1,10 +1,8 @@
 import { ref } from "vue";
 
 const mediaQueries = () => {
+
   const mobile = window.matchMedia("(max-width: 428px)");
-  const tablet = window.matchMedia(
-    "(min-width: 1024px) and (max-width: 1199px)"
-  );
   const desktop = window.matchMedia("(min-width: 1200px)");
 
   const portrait = window.matchMedia("(orientation: portrait)");
@@ -13,31 +11,11 @@ const mediaQueries = () => {
   const orientationIs = ref("");
   const deviceIs = ref("");
 
-  if (mobile.matches) {
-    deviceIs.value = "mobile";
-  }
-  if (tablet.matches) {
-    deviceIs.value = "tablet";
-  }
-  if (desktop.matches) {
-    deviceIs.value = "desktop";
-  }
-  if (portrait.matches) {
-    orientationIs.value = "portrait";
-  }
-  if (landscape.matches) {
-    orientationIs.value = "landscape";
-  }
+  // on MATCHMEDIA change: deviceIs (if true)
 
   mobile.onchange = (e) => {
     if (e.matches) {
       deviceIs.value = "mobile";
-    }
-  };
-
-  tablet.onchange = (e) => {
-    if (e.matches) {
-      deviceIs.value = "tablet";
     }
   };
 
@@ -59,14 +37,39 @@ const mediaQueries = () => {
     }
   };
 
+  // if MATCHES deviceIs value
+
+  if (mobile.matches) {
+    deviceIs.value = "mobile";
+  }
+
+  if (desktop.matches) {
+    deviceIs.value = "desktop";
+  }
+
+  if (portrait.matches) {
+    orientationIs.value = "portrait";
+    if (portrait.matches && !desktop.matches) {
+      deviceIs.value = "mobile";
+    }
+  }
+  
+  if (landscape.matches) {
+    orientationIs.value = "landscape";
+    if (landscape.matches && !desktop.matches) {
+      deviceIs.value = "mobile";
+    }
+  }
+
   return {
     mobile,
-    tablet,
+    desktop,
     portrait,
     landscape,
     orientationIs,
     deviceIs,
   };
+
 };
 
 export default mediaQueries;
