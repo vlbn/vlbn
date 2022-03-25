@@ -26,15 +26,17 @@ watch(isLoggedIn, () => {
 
 <template>
   <div class="fill-viewport-100 centerXY">
+  
     <div class="pointer">
       <ArrowNarrowLeftIcon class="icono is-fixed-top-left" @click="goTo('/')" />
     </div>
 
     <Transition name="flip" mode="out-in" appear>
+
       <div class="control centerXY" v-if="isLoggedIn">
         <mark>
           welcome to
-          <strong>{{ $route.name }}</strong>
+          <strong>{{ $route.fullPath }}</strong>
         </mark>
         <div
           class="circle-170 shadow-1"
@@ -44,33 +46,32 @@ watch(isLoggedIn, () => {
         <h2>{{ user.id }}</h2>
         <h3>{{ user.email }}</h3>
         <hr />
-        <button class="button-52" role="button" @click="tU.setIsLoggedIn(false)">
-          OFF
-        </button>
+        <button class="button-52" role="button" @click="tU.setIsLoggedIn(false)">OFF</button>
       </div>
 
-      <div v-else>
-        <mark class="mr-1">🧙‍♂️ you shall not pass!</mark>
-        <button class="button-33" role="button" @click="tU.setIsLoggedIn(true)">
-          ON
-        </button>
-        <br />
-        <h1 class="p-1">
+      <div v-else class="m-3 p-3">
+        <div class="pb-3">🧙‍♂️</div>
+        <div class="pb-3">
+          <mark class="mr-1">you shall not pass!</mark>
+        </div>
+        <div class="mb-0 pb-0">
+          <button class="button-33" role="button" @click="tU.setIsLoggedIn(true)">ON</button>
+        </div>
+        <h1 class="px-1">
           <Kanye />
         </h1>
       </div>
+
     </Transition>
+
   </div>
 </template>
 
 <style lang="scss" scoped>
+
 .control {
   img {
     max-width: 5rem;
-  }
-  mark {
-    margin: 1rem;
-    padding: 1rem;
   }
   strong {
     font-size: 2rem;
@@ -147,4 +148,5 @@ watch(isLoggedIn, () => {
     padding: 13px 50px 13px;
   }
 }
+
 </style>
