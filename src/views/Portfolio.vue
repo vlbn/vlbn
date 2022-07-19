@@ -48,7 +48,7 @@ function flipCard() {
       
         <BaseCard v-if="!flip" class="myCard-side-A">
           <template #centro>
-            <Logo />
+            <Logo />xxx
           </template>
         </BaseCard>
 
