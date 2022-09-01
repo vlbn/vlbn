@@ -1,0 +1,48 @@
+// flip card component
+.myCard {
+  transform: translateZ(0);
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  &-side {
+    &-A {
+      box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+      border-radius: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $green;
+      min-height: 190px;
+      max-height: 190px;
+      max-width: 340px;
+      min-width: 340px;
+      figure {
+        width: 90%;
+        margin-block-start: 0rem;
+        margin-block-end: 0rem;
+        margin-inline-start: 0rem;
+        margin-inline-end: 0rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    &-B {
+      box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+      border-radius: 5px;
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: space-between;
+      background-color: $paper;
+      min-height: 340px;
+      max-height: 340px;
+      max-width: 190px;
+      min-width: 190px;
+      figure {
+        margin-block-start: 0.5rem;
+        margin-block-end: 0.5rem;
+        margin-inline-start: 0.3rem;
+        margin-inline-end: 0.3rem;
+      }
+    }
+  }
+}
