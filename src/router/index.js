@@ -3,18 +3,13 @@ import { createRouter, createWebHistory } from "vue-router";
 const routes = [
   {
     path: "/",
-    name: "portfolio",
-    component: () => import("@/views/Portfolio.vue"),
-  },
-  {
-    path: "/control",
-    name: "control",
-    component: () => import("@/views/Control.vue"),
+    name: "portafolio",
+    component: () => import("@/views/PortaFolio.vue"),
   },
   {
     path: "/:catchAll(.*)",
-    name: "hmmm",
-    component: () => import("@/views/Hmmm.vue"),
+    name: "404",
+    component: () => import("@/views/NoEncontrado.vue"),
   },
 ];
 

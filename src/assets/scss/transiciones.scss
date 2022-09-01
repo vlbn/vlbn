@@ -31,3 +31,14 @@
   transition: all 0.2s ease-out;
   animation: all 0.2s;
 }
+
+// moda
+.moda-enter-active,
+.moda-leave-active {
+  transition: all 0.25s ease;
+}
+.moda-enter-from,
+.moda-leave-to {
+  opacity: 0;
+  transform: scale(1.1);
+}

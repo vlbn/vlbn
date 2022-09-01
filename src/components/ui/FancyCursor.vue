@@ -8,8 +8,12 @@ import { ref, onMounted, onBeforeUnmount } from "vue";
 import { gsap } from "gsap";
 
 const props = defineProps({
-  trigger: { type: String, default: "a" },
-  fanciness: { type: Boolean, default: false },
+  trigger: {
+    type: String,
+    default() {
+      return "a";
+    },
+  },
 });
 
 const cursorA = ref("blue");
@@ -43,11 +47,9 @@ const cursorAttach = ($event) => {
   });
 };
 
-window.addEventListener("mousemove", cursorAttach);
-
 onMounted(() => {
+  window.addEventListener("mousemove", cursorAttach);
   let iTrigger = document.querySelectorAll(props.trigger);
-
   for (let i = 0; i < iTrigger.length; i++) {
     iTrigger[i].addEventListener("mouseover", cursorIn);
     iTrigger[i].addEventListener("mouseout", cursorOut);
@@ -103,9 +105,11 @@ $blue: #273849;
 .green {
   background-color: $green;
 }
+
 .blue {
   background-color: $blue;
 }
+
 .cursor {
   &-a {
     opacity: 0;
@@ -118,6 +122,7 @@ $blue: #273849;
     z-index: 2;
     pointer-events: none;
   }
+
   &-b {
     opacity: 0;
     position: fixed;

@@ -1,7 +1,6 @@
 import { ref } from "vue";
 
 const mediaQueries = () => {
-
   const mobile = window.matchMedia("(max-width: 428px)");
   const desktop = window.matchMedia("(min-width: 1200px)");
 
@@ -53,7 +52,7 @@ const mediaQueries = () => {
       deviceIs.value = "mobile";
     }
   }
-  
+
   if (landscape.matches) {
     orientationIs.value = "landscape";
     if (landscape.matches && !desktop.matches) {
@@ -69,7 +68,6 @@ const mediaQueries = () => {
     orientationIs,
     deviceIs,
   };
-
 };
 
 export default mediaQueries;
