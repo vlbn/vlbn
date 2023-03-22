@@ -1,5 +1,6 @@
 <p align="center">
    
-  <h5 align="center">🧙‍♂️ personal website</h5>
+  
+  <img src="https://github.com/vlbn/vlbn/blob/deploy/public/favicon.svg">
 
 </p>
