@@ -4,6 +4,7 @@
 </template>
 
 <script setup>
+
 import { ref, onMounted, onBeforeUnmount } from "vue";
 import { gsap } from "gsap";
 
@@ -34,7 +35,7 @@ const cursorAttach = ($event) => {
     y: $event.clientY,
   });
   gsap.to(".cursor-a", {
-    duration: 0.5,
+    duration: 0,
     autoAlpha: 1,
     x: $event.clientX,
     y: $event.clientY,
@@ -48,6 +49,11 @@ const cursorAttach = ($event) => {
 };
 
 onMounted(() => {
+
+  gsap.set("html", {
+    cursor: "none",
+  });
+
   window.addEventListener("mousemove", cursorAttach);
   let iTrigger = document.querySelectorAll(props.trigger);
   for (let i = 0; i < iTrigger.length; i++) {
@@ -89,16 +95,24 @@ onMounted(() => {
 });
 
 onBeforeUnmount(() => {
+
+  gsap.set("html", {
+    cursor: "default",
+  });
+
   window.removeEventListener("mousemove", cursorAttach);
-  gsap.to(".cursor-b", {
-    duration: 1.3,
-    scale: 100,
+  gsap.to(".cursor-b, .cursor-a", {
+    duration: 0,
+    scale: 0,
     autoAlpha: 0,
   });
+
 });
+
 </script>
 
 <style lang="scss">
+
 $green: #42b983;
 $blue: #273849;
 
