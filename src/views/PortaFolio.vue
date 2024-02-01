@@ -5,8 +5,8 @@ console.log(version);
 </script>
 
 <template>
-  <FancyCursor />
-  <div class="is-flex is-justify-content-center fv-100 is-flex-direction-column is-align-items-center">
-    <a class="title is-2">valbuena@duck.com</a>
+  <div class="fv-100 centerXY">
+    <FancyCursor />
+    <a class="title is-1">valbuena@duck.com</a>
   </div>
 </template>
