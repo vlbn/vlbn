@@ -9,9 +9,9 @@ const routes = [
   },
   {
     path: "/:catchAll(.*)",
-    name: "404",
-    component: () => import("@/views/NoEncontrado.vue"),
-    meta: { transition: "moda" },
+    name: "where do we go now?",
+    component: () => import("@/views/LostAndFound.vue"),
+    meta: { transition: "fade" },
   },
 ];
 
