@@ -13,7 +13,7 @@ const routes = [
     path: "/:catchAll(.*)",
     name: "where do we go now?",
     component: LostAndFound,
-    meta: { transition: "fade" },
+    meta: { transition: "moda" },
   },
 ];
 
