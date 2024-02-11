@@ -3,7 +3,7 @@ import { createApp } from "vue";
 import App from "./App.vue";
 import router from "./router";
 
-import "./assets/scss/_index.scss";
+import "./assets/scss/00_index.scss";
 
 const app = createApp(App);
 

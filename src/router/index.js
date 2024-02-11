@@ -1,5 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 
+import LostAndFound from "@/views/LostAndFound.vue";
+
 const routes = [
   {
     path: "/",
@@ -10,7 +12,7 @@ const routes = [
   {
     path: "/:catchAll(.*)",
     name: "where do we go now?",
-    component: () => import("@/views/LostAndFound.vue"),
+    component: LostAndFound,
     meta: { transition: "fade" },
   },
 ];
