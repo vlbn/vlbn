@@ -1,3 +1,3 @@
 <p align="center">
-  <img src="https://github.com/vlbn/vlbn/blob/main/favicon.svg">
+  <img src="https://raw.githubusercontent.com/vlbn/vlbn/main/favicon.ico">
 </p>
